@@ -1,0 +1,422 @@
+ <!DOCTYPE html>
+ <div id="container">
+                     
+                <nav id="navbar" style="margin-bottom: 10px;">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUTME.html">INFO </a></li>
+                        <li><a href="WORKS.html">WORKS</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            <main>
+                <div class="contenedor-video">
+    <video controls autoplay muted loop poster="imagen-de-portada.jpg">
+        <source src="DEMOREELVALDEZ.mp4" type="video/mp4">
+         
+    </video>
+</div>
+<div class="pricing-grid">
+        
+        
+        <div class="pricing-card">
+          <div class="card-header">
+            <h2>Softwares</h2>
+            
+          </div>
+          <ul class="features">
+            <li>Blender</li>
+            <li>Clip Studio Paint</li>
+            <li>Medibang Paint Pro</li>
+            <li>Krita</li>
+            <li>OpenToonz</li>
+            <li>Capcut</li>
+            <li>Adobe After Effects</li>
+            
+            
+          </ul>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+        <div class="pricing-card">
+          <div class="card-header">
+            <h2>Skills</h2>
+            
+          </div>
+          <ul class="features">
+            <li>Illustration</li>
+            <li>Character Design</li>
+            <li>Uv unwrapping</li>
+            <li>Hand-texturing 3d models</li>
+            <li >Storyboarding</li>
+            <li>Visual Development</li>
+            <li>Comic art</li>
+          </ul>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+        <div class="pricing-card">
+          <div class="card-header">
+            <h2>Commissions </h2>
+            
+          </div>
+          <ul class="features">
+            <li>✔ Ocs</li>
+            <li>✔ Fanart</li>
+            <li>✔ Furries</li>
+            <li>✔ Partial mechas</li>
+            <li>✔ Partial armors</li>
+            <li>✘ Depictions of graphic violence</li>
+            <li >✘ Non-artistic Nudity</li>
+            
+          </ul>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+       
+
+      </div>
+    </div>
+            <div id="flex">
+                
+                <main>
+        
+    </div>
+  </div>
+
+                          
+                </main> 
+            </div>
+            <footer id="footer" style="margin-top: 10px;">Luca Valdez 2026, todos los derechos reservados</footer>
+        </div>
+      
+        <style>
+           
+    
+.contenedor-video {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px; 
+    overflow: hidden;   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+
+.contenedor-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+
+
+
+.pricing-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 35px 30px;
+  width: 100%;
+  height: 60%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(3, 54, 15, 0.2), 0 2px 4px -1px rgba(3, 54, 15, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(187, 215, 175, 0.5), 0 10px 10px -5px rgba(187, 215, 175, 0.5);
+}
+
+/* Tarjeta destacada (Featured) */
+.pricing-card.featured {
+  border: 2px solid var(--primary-color);
+}
+
+.pricing-card .badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+.pricing-card .price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: block;
+  margin-bottom: 25px;
+}
+
+.pricing-card .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+/* Lista de características */
+.features {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-grow: 1; /* Empuja el botón hacia abajo para alineación */
+}
+
+.features li {
+
+  position: absolute;
+  left: 0;
+  margin-bottom: 12px;
+  font-family: 'Caudex', sans-serif;
+  color: #351903;
+  position: relative;
+  padding-left: 25px;
+}
+
+
+
+
+.card-footer {
+  margin-top: auto;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Media Query para pantallas grandes (Escritorio) */
+@media (min-width: 768px) {
+  .pricing-grid {
+    flex-direction: row;
+    align-items: stretch; /* Mantiene todas las tarjetas con la misma altura */
+  }
+  
+  .pricing-card.featured {
+    transform: scale(1.05); /* Hace la tarjeta popular ligeramente más grande */
+  }
+  
+  .pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
+}
+                * {
+                    cursor: url('https://cdn.cursors-4u.net/previews/apple-b3c7f687-37.webp') 29 29, auto !important;
+                    }
+            @font-face {
+                font-family: Dreamwish;
+                src: url('dreamwish.ttf');
+                           }
+            @font-face {
+                font-family: Newrocker-regular;
+                src: url('NewRocker-Regular.ttf');
+                           } 
+             @font-face {
+                font-family: Bremlin;
+                src: url('Bremlin.otf');
+                           }
+            @font-face {
+                font-family:Rougescript;    
+                src: url('RougeScript-Regular.ttf');
+                           }                                                  
+            @font-face {
+                font-family:Caudex;    
+                src: url('Caudex-Regular.ttf');
+                           }
+     
+          
+
+            body {
+            
+                margin: 0;
+                           
+                background-color: #8ea75f;
+                
+                              
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+           
+            #container {
+                max-width: auto;
+               
+                margin: 0 auto;
+                           }
+
+            #container a {
+                color: #365004;
+                font-family: 'Dreamwish',;
+                font-weight: bold;
+                           }
+
+          
+            #navbar {
+                font-family: 'Bremlin', sans-bold;
+                height: 50px;
+                background-color: #365004;
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 10px;
+                margin: 10px;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            #navbar li a {
+                color: #e2ecab;
+             
+                font-weight: 800;
+                text-decoration: none;
+               
+            }
+
+            #navbar li a:hover {
+                color: #EDE383;
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+ 
+
+   
+  
+            main {
+                justify-content: justify;
+                background-color: #e4e1c6;
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                border-radius: 10px;
+               
+               
+            }
+
+            footer {
+                flex: 1;
+                background-color: #365004;
+                font-family: 'Bremlin', sans-serif;
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                color: #e2ecab;
+                text-align: center;
+
+            }
+            p {
+               
+                text-align: center;
+                font-family: 'Caudex', sans-serif;
+                color: #351903;
+                font-size: 25px;
+            }    
+            h1{ 
+                text-align: center;
+                font-size: 150px;
+                font-family: 'Dreamwish', sans-serif;
+                color: #8c0b13;
+               
+            }
+            h2 {
+                
+                text-align: center;
+                font-family: 'Newrocker-regular', bold;
+                color: #925E06;
+                font-size: 1.5rem;
+  margin-bottom: 15px;
+            }    
+           
+        
+
+         
+        </style>
+
+    

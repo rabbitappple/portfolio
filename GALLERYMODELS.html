@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <HEAD>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+ <style>
+           
+       
+            @font-face {
+                font-family: Dreamwish;
+                src: url('dreamwish.ttf');
+                           }
+            @font-face {
+                font-family: Newrocker-regular;
+                src: url('NewRocker-Regular.ttf');
+                           } 
+             @font-face {
+                font-family: Bremlin;
+                src: url('Bremlin.otf');
+                           }
+            @font-face {
+                font-family:Rougescript;    
+                src: url('RougeScript-Regular.ttf');
+                           }                                                  
+            @font-face {
+                font-family:Caudex;    
+                src: url('Caudex-Regular.ttf');
+                           }
+     
+
+           
+
+            * {margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+            
+                margin: 0;
+                text-align: center;
+                padding: 20px;           
+                background:#e4e1c6;
+                background-size: cover;
+                
+                              
+            }
+        
+
+          
+            #navbar {
+                font-family: 'Bremlin', sans-bold;
+                height: 50px;
+                background-color: #365004;
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 10px;
+                margin: 10px;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            #navbar li a {
+                color: #e2ecab;
+             
+                font-weight: 800;
+                text-decoration: none;
+               
+            }
+
+            #navbar li a:hover {
+                color: #EDE383;
+                text-decoration: underline;
+            }
+
+            .button:active {
+                transform: scale(0.95);
+                color: #e2ecab;
+            }
+      
+
+            #flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            
+           .container {
+        position: relative;
+        min-height: 100vh;
+        background:#365004 ;
+      }
+
+      .container .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .container .image-container .image {
+        height: 250px;
+        width: 350px;
+        border: 10px solid #e2ecab;
+        box-shadow: 0 5px 15px black .5;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .container .image-container .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.2s linear;
+      }
+      .container .image-container .image:hover img {
+        transform: scale(1.1);
+      }
+
+      .container .popup-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+      }
+      .container .popup-image span {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 40px;
+        font-weight: bolder;
+        color: #8c0b13;
+        cursor: pointer;
+        z-index: 100;
+      }
+
+      .container .popup-image img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 80%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .container .popup-image img {
+          width: 95%;
+        }
+      }
+      * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4e1c6;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.galeria {
+    display: grid;
+   
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foto {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.05);
+}
+.lightbox {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease; 
+}
+
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+    user-select: none;
+    z-index: 1010;
+}
+
+.flecha:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.izq { left: 20px; }
+.der { right: 20px; }
+
+.lightbox img, .flecha {
+    pointer-events: auto;}
+    </style>
+            
+           </style>
+
+        <div id="container">
+                     
+                <nav id="navbar" style="margin-bottom: 10px;">
+                    <ul>
+                         
+                        
+                        <li><a href="WORKS.html">BACK</a></li>
+                                              </div>
+</ul>
+            
+              <div class="galeria">
+        <div class="foto"><img src="WORKS/MODELS/detras.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/Frente.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/lado.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/3 - 4.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/3 - 4 atras.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/ren.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/render2.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/maximage.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/8.PNG" ></div>
+        <div class="foto"><img src="WORKS/MODELS/10.png" ></div>
+        <div class="foto"><img src="WORKS/MODELS/13.png" ></div>
+ 
+    
+        
+        
+        
+
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="cerrar" id="btn-cerrar">&times;</span>
+        <button class="flecha izq" id="btn-izq">&#10094;</button>
+        <img id="imagen-lightbox" src="" alt="Imagen ampliada">
+        <button class="flecha der" id="btn-der">&#10095;</button>
+    </div>
+
+</body>
+</body>
+
+                  <script>
+
+const imagenes = document.querySelectorAll('.galeria .foto img');
+const lightbox = document.getElementById('lightbox');
+const imagenLightbox = document.getElementById('imagen-lightbox');
+const btnCerrar = document.getElementById('btn-cerrar');
+const btnIzq = document.getElementById('btn-izq');
+const btnDer = document.getElementById('btn-der');
+
+let indiceActual = 0;
+
+function mostrarImagen(indice) {
+    imagenLightbox.src = imagenes[indice].src;
+    indiceActual = indice;
+}
+
+
+imagenes.forEach((img, indice) => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        mostrarImagen(indice);
+    });
+});
+
+function imagenAnterior() {
+    let nuevoIndice = indiceActual - 1;
+    if (nuevoIndice < 0) {
+        nuevoIndice = imagenes.length - 1; 
+    }
+    mostrarImagen(nuevoIndice);
+}
+
+function imagenSiguiente() {
+    let nuevoIndice = indiceActual + 1;
+    if (nuevoIndice >= imagenes.length) {
+        nuevoIndice = 0; 
+    }
+    mostrarImagen(nuevoIndice);
+}
+
+btnIzq.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    imagenAnterior();
+});
+
+btnDer.addEventListener('click', (e) => {
+    e.stopPropagation();
+    imagenSiguiente();
+});
+
+
+function cerrarLightbox() {
+    lightbox.style.display = 'none';
+}
+
+btnCerrar.addEventListener('click', cerrarLightbox);
+
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        cerrarLightbox();
+    }
+});
+
+
+document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') imagenSiguiente();
+        if (e.key === 'ArrowLeft') imagenAnterior();
+        if (e.key === 'Escape') cerrarLightbox();
+    }
+});
+    </script>
+  </body>      
+
+                </body>
+                </html>
+                
